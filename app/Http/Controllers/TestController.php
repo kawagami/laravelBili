@@ -12,7 +12,19 @@ class TestController extends Controller
     }
     public function add()
     {
-        echo '這是add頁面';
+        $db = DB::table('member');
+        $db->insert([
+            [
+                'name' => '東風馬',
+                'age' => '18',
+                'email' => 'madofong@gmail.com'
+            ],
+            [
+                'name' => '北風馬',
+                'age' => '98',
+                'email' => 'mado1234@gmail.com'
+            ],
+        ]);
     }
     public function del()
     {
@@ -20,7 +32,11 @@ class TestController extends Controller
     }
     public function update()
     {
-        echo '這是update頁面';
+        $db = DB::table('member');
+        $result = $db->where('id', '=', '1')->update([
+            'name' => 'Julia',
+        ]);
+        dd($result);
     }
     public function select()
     {
