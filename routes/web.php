@@ -33,4 +33,5 @@ Route::group(['prefix' => '/home/test'], function () {
     Route::get('del', 'TestController@del');
     Route::get('update', 'TestController@update');
     Route::get('select', 'TestController@select');
+    Route::get('connectMysqlTest', 'TestController@connectMysqlTest');
 });

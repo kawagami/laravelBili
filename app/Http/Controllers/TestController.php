@@ -42,4 +42,10 @@ class TestController extends Controller
     {
         echo '這是select頁面';
     }
+    public function connectMysqlTest()
+    {
+        $db = DB::table('users');
+        $data = $db->get();
+        dd($data);
+    }
 }
