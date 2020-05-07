@@ -16,11 +16,13 @@ class TestController extends Controller
         $db->insert([
             [
                 'name' => '東風馬',
-                'email' => 'madofong@gmail.com'
+                'email' => 'madofong@gmail.com',
+                'password'=>'11597'
             ],
             [
                 'name' => '北風馬',
-                'email' => 'mado1234@gmail.com'
+                'email' => 'mado1234@gmail.com',
+                'password'=>'4aef9ew48'
             ],
         ]);
     }
