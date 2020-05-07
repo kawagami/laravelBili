@@ -18,7 +18,12 @@ use Illuminate\Support\Facades\Request;
 //     return view('welcome');
 // });
 
-Route::get('/', 'TestController@test');
+
+// Route::get('/', 'TestController@test');
+
+// 方便heroku上使用
+Route::get('/', 'TestController@connectMysqlTest');
+
 
 Route::get('/home/test', 'TestController@test');
 
