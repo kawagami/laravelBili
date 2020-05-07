@@ -12,16 +12,14 @@ class TestController extends Controller
     }
     public function add()
     {
-        $db = DB::table('member');
+        $db = DB::table('users');
         $db->insert([
             [
                 'name' => '東風馬',
-                'age' => '18',
                 'email' => 'madofong@gmail.com'
             ],
             [
                 'name' => '北風馬',
-                'age' => '98',
                 'email' => 'mado1234@gmail.com'
             ],
         ]);
