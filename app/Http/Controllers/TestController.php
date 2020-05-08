@@ -17,12 +17,12 @@ class TestController extends Controller
             [
                 'name' => '東風馬',
                 'email' => 'madofong@gmail.com',
-                'password'=>'11597'
+                'password' => '11597'
             ],
             [
                 'name' => '北風馬',
                 'email' => 'mado1234@gmail.com',
-                'password'=>'4aef9ew48'
+                'password' => '4aef9ew48'
             ],
         ]);
     }
@@ -46,6 +46,9 @@ class TestController extends Controller
     {
         $db = DB::table('users');
         $data = $db->get();
-        dd($data);
+        // dd($data);
+        foreach ($data as $key => $value) {
+            echo "id是:{$value->id},名字是:{$value->name},e-mail是:{$value->email}<br/>";
+        }
     }
 }
